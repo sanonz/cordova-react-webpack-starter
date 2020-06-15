@@ -1,0 +1,100 @@
+{
+  "name": "courier",
+  "version": "1.0.0",
+  "title": "React Starter",
+  "description": "React Starter",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server -w",
+    "serve": "phonegap serve",
+    "dev:local": "webpack --env.config=local -w",
+    "dev:staging": "webpack --env.config=staging -w",
+    "dev:production": "webpack --env.config=production -w",
+    "run:ios": "cordova run ios",
+    "run:android": "cordova run android",
+    "debug:ios": "cordova build ios --verbose --device --debug --buildConfig=./signing/config.json",
+    "debug:ios:local": "webpack --env.config=local && npm run debug:ios",
+    "debug:ios:staging": "webpack --env.config=staging && npm run debug:ios",
+    "debug:ios:production": "webpack --env.config=production && npm run debug:ios",
+    "debug:android": "cordova build android --verbose --device --debug --buildConfig=./signing/config.json",
+    "debug:android:local": "webpack --env.config=local && npm run debug:android",
+    "debug:android:staging": "webpack --env.config=staging && npm run debug:android",
+    "debug:android:production": "webpack --env.config=production && npm run debug:android",
+    "release:ios": "cordova build ios --verbose --device --release --buildConfig=./signing/config.json",
+    "release:ios:local": "npm run clean && webpack --env.config=local && npm run release:ios",
+    "release:ios:staging": "npm run clean && webpack --env.config=staging && npm run release:ios",
+    "release:ios:production": "npm run clean && webpack --env.production --env.config=production && npm run cleansourcemap && npm run release:ios",
+    "release:android": "cordova build android --verbose --device --release --buildConfig=./signing/config.json",
+    "release:android:local": "npm run clean && webpack --env.config=local && npm run release:android",
+    "release:android:staging": "npm run clean && webpack --env.config=staging && npm run release:android",
+    "release:android:production": "npm run clean && webpack --env.production --env.config=production && npm run cleansourcemap && npm run build:android",
+    "profile": "npm run clean && webpack --env.profile",
+    "clean": "rimraf www",
+    "cleansourcemap": "rimraf www/**/*.js.map"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "React Router",
+    "React Starter"
+  ],
+  "author": "Sanonz <sanonz@126.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanonz/duoea.git"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "@hot-loader/react-dom": "^16.13.0",
+    "@sentry/browser": "^5.17.0",
+    "@types/classnames": "^2.2.10",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "framework7": "^5.7.6",
+    "framework7-react": "^5.7.6",
+    "phonegap": "^9.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@sentry/webpack-plugin": "^1.11.1",
+    "@types/webpack": "^4.41.17",
+    "autoprefixer": "^9.8.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "compression-webpack-plugin": "^4.0.0",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "less": "^3.11.2",
+    "less-loader": "^6.1.0",
+    "postcss-loader": "^3.0.0",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "raw-loader": "^4.0.1",
+    "react-hot-loader": "^4.12.21",
+    "rimraf": "^3.0.2",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "style-loader": "^1.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.9.3",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "cordova": {
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  }
+}

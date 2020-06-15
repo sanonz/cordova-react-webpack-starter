@@ -1,0 +1,15 @@
+@import (reference) './vars.less';
+
+.ellipsis(@mutiple: false) when (@mutiple = false)
+{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ellipsis(@mutiple)
+{
+  display: -webkit-box;
+  -webkit-line-clamp: @mutiple;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

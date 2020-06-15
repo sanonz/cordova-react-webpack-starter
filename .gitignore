@@ -1,0 +1,13 @@
+node_modules
+/.idea/
+
+/dist/
+/www/
+/plugins/
+/platforms/
+/signing/
+
+*.log
+
+.DS_Store
+.sentryclirc

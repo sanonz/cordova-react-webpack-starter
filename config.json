@@ -1,0 +1,11 @@
+{
+  "local": {
+    "api": "//api-dev.newbox.ltd/"
+  },
+  "staging": {
+    "api": "//api-staging.newbox.ltd/"
+  },
+  "production": {
+    "api": "//api-production.newbox.ltd/"
+  }
+}
