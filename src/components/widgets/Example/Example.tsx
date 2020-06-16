@@ -1,6 +1,5 @@
 import * as React from 'react';
 import classNames from 'classnames';
-// import { Link } from 'react-router-dom';
 
 import styles from './styles.less';
 import useStyles from '@/hooks/useStyles';
